@@ -2,7 +2,7 @@
  * Created by manognyakoduganti on 11/2/17.
  */
 
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 
 @Component({
@@ -10,4 +10,12 @@ import {Component} from '@angular/core';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
+  @Output() getHeader = new EventEmitter<string>();
+
+  loadRecipes() {
+    this.getHeader.emit('recipe');
+  }
+  loadShppingList() {
+    this.getHeader.emit('slist');
+  }
 }
