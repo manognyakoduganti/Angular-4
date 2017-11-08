@@ -30,7 +30,11 @@ export class RecipeService {
 
   constructor(private shoppingService: ShoppingListService){};
 
-  AddIngToShoppingList(ingredients: Ingredient[]){
+  AddIngToShoppingList(ingredients: Ingredient[]) {
 this.shoppingService.addIngredients(ingredients);
+  }
+
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 }
