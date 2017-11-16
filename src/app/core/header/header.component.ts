@@ -27,4 +27,8 @@ this.dsService.storeRecipes().subscribe(
   onLogout() {
     this.authService.logout();
   }
+
+  isAuthenticated() {
+    return this.authService.isAuthenticated();
+  }
 }
